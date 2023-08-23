@@ -10,25 +10,22 @@
         android:id="@+id/EdDolares"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/leyendadolares" />
 
     <EditText
         android:id="@+id/EdEuros"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="68dp"
         android:ems="10"
         android:inputType="numberDecimal"
-        android:text="Name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.393"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EdDolares" />
 
@@ -36,11 +33,11 @@
         android:id="@+id/leyendadolares"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="76dp"
         android:text="EUROS"
         android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -52,15 +49,17 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/EdEuros"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EdDolares" />
 
     <com.google.android.material.chip.ChipGroup
-        android:layout_width="273dp"
-        android:layout_height="145dp"
-        android:layout_marginTop="40dp"
+        android:id="@+id/chipGroup"
+        android:layout_width="278dp"
+        android:layout_height="72dp"
+        android:layout_marginTop="12dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.376"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EdEuros">
 
@@ -81,23 +80,26 @@
         android:id="@+id/btConvertir"
         android:layout_width="209dp"
         android:layout_height="51dp"
-        android:layout_marginBottom="40dp"
         android:text="Convertir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texResultado"
+        app:layout_constraintVertical_bias="0.254" />
 
     <TextView
         android:id="@+id/texResultado"
-        android:layout_width="103dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="132dp"
+        android:layout_width="252dp"
+        android:layout_height="82dp"
         android:text=""
         android:textSize="20dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.474"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipGroup"
+        app:layout_constraintVertical_bias="0.077" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,7 +24,7 @@ private MainActivityViewModel vm;
         binding.btConvertir.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                binding.texResultado.setText(vm.calcularConversion(Double.parseDouble(binding.EdDolares.getText().toString()), Double.parseDouble(binding.EdEuros.getText().toString())));
+                binding.texResultado.setText(vm.calcularConversion(Double.parseDouble(binding.EdDolares.getText().toString()), Double.parseDouble(binding.EdEuros.getText().toString()))+"");
             }
         });
 
@@ -32,15 +32,16 @@ private MainActivityViewModel vm;
         binding.rbEuroaPesos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "hola mundo ", Toast.LENGTH_SHORT).show();
-            binding.rbPesosaEuros.setEnabled(false);
+                //binding.rbPesosaEuros.setChecked(false);
+
+
             }
         });
         binding.rbPesosaEuros.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                binding.rbPesosaEuros.setEnabled(false);
-                Toast.makeText(MainActivity.this, "accion boton 2", Toast.LENGTH_SHORT).show();
+                binding.rbEuroaPesos.setChecked(false);
+
             }
         });
 
