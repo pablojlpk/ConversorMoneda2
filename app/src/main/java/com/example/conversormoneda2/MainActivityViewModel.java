@@ -17,8 +17,8 @@ import java.security.cert.PKIXRevocationChecker;
 
 public class MainActivityViewModel extends AndroidViewModel {
     private Context context;
-    private Double cotizaEuro= 1.025;
-    private Double cotizaDolar=1.087;
+    private Double cotizaEuro= 1.08;
+    private Double cotizaDolar=1.52;
 
 
 
@@ -38,24 +38,44 @@ public class MainActivityViewModel extends AndroidViewModel {
         return  mutableconversion;
     }
 
-    public void calcularConversion(String valor1, String valor2,int tconv){
+/*
+    public void calcularConversion(String valor, int tconv){
         Double calculo= (double) 0;
 
-        if (valor1.length()==0 || valor2.length()==0 && tconv==0) {
+        if (valor.length()==0 && tconv!=0) {
             Toast.makeText(context, "RECUERDE INGRESAR VALOR Y EL TIPO DE CONVERSIÓN", Toast.LENGTH_LONG).show();
         }else {
             if (tconv==1) {
-                calculo=Double.parseDouble(valor1)*cotizaDolar;
+                calculo=Double.parseDouble(valor)*cotizaDolar;
             } else {
-                calculo=Double.parseDouble(valor2)*cotizaEuro;
+                calculo=Double.parseDouble(valor)*cotizaEuro;
             }
 
         }
         mutableconversion.setValue(calculo);
 
     }
+  */
 
 
-    
+    public void calcularConversion(String valor1, String valor2,int tconv){
+
+        Double calculo= (double) 0;
+        int cartel=1;
+        if (tconv==1 && valor1.length()>0) {
+            calculo=Double.parseDouble(valor1)*cotizaDolar;
+            cartel=0;
+        }
+        if (tconv==2 && valor2.length()>0) {
+            calculo=Double.parseDouble(valor2)*cotizaEuro;
+            cartel=0;
+        }
+
+        if (cartel==1){
+            Toast.makeText(context, "Falta ingresar el tipo de conversión", Toast.LENGTH_SHORT).show();
+        }
+        mutableconversion.setValue(calculo);
+    }
+
     }
 
