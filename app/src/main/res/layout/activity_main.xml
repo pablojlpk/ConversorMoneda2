@@ -45,7 +45,7 @@
         android:id="@+id/leyendaPesos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PESOS"
+        android:text="DOLARES"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/EdEuros"
         app:layout_constraintEnd_toEndOf="parent"
@@ -55,25 +55,24 @@
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipGroup"
-        android:layout_width="278dp"
-        android:layout_height="72dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="222dp"
+        android:layout_height="132dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EdEuros">
 
         <RadioButton
-            android:id="@+id/rbEuroaPesos"
+            android:id="@+id/rb_euroa_dolares"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Euro a Pesos" />
+            android:text="Euro a Dolares" />
 
         <RadioButton
-            android:id="@+id/rbPesosaEuros"
+            android:id="@+id/rb_dolaresa_euros"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Pesos a Euros" />
+            android:text="Dolares a Euros" />
     </com.google.android.material.chip.ChipGroup>
 
     <Button
@@ -92,14 +91,14 @@
         android:id="@+id/texResultado"
         android:layout_width="252dp"
         android:layout_height="82dp"
+
         android:text=""
         android:textSize="20dp"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chipGroup"
-        app:layout_constraintVertical_bias="0.077" />
+        app:layout_constraintVertical_bias="0.162" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
